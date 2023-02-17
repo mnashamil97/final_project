@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/icon" href="../image/logo/logo1.png">
+
+    <title>BOSARA TEXTILE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../resources/datatablesAlt/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="../resources/datatablesAlt/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../resources/datatablesAlt/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+    <div style="background-color: #db9200; height:8px;"></div>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light p-2">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-1 order-md-0" id="navbarNav">
+            <ul class="navbar-nav fw-bold">
+                <li class="nav-item me-2">
+                    <a href="#" class="text-decoration-underline" style="color:#808080">Home</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="#" class="text-decoration-underline" style="color:#808080">My Profile</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="#" class="text-decoration-underline" style="color:#808080">Contact Us</a>
+                </li>
+                <li class="nav-item font-weight-lighter">
+                    <div>
+                        <a href="tel:+94763669100" class="me-2" style="color:#808080"><i
+                                class="fas fa-phone-rotary"></i> +94 763669100</a>
+                        <a href="https://www.facebook.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-twitter"></i></i></a>
+                        <a href="https://www.youtube.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <span class="ps-2 me-2" style="color:#808080;">
+                <span style="font-size: larger"><i class="fas fa-user-circle"></i></span>
+
+                <span>Hi...! User</span> &nbsp;
+                <a id="loginBtn" href="#" class="button btn border-0 text-white text-uppercase text-decoration-none"
+                    style="color:#808080;">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+                <?php //} 
+                ?>
+            </span>
+        </div>
+
+    </nav>
+
+    <!-- /////////////////////////////////// 2nd Navbar ///////////////////////////////////// -->
+    <nav class="navbar sec-nav sticky-top navbar-expand-sm justify-content-center">
+
+        <div class="d-none d-sm-block me-auto">
+            <div class="navbar-brand">
+                <img src="../image/logo/logo1.png" width="200px" height="100px" class="align-top" alt="logo">
+            </div>
+        </div>
+
+        <ul class="navbar-nav text-uppercase fw-bolder">
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="home.php#newIn">new in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="home.php#collection">collections</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="aboutUs.php">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="cart.php" style="font-size: large">
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span class="badge badge-notify text-white">
+                        0
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <!-- carousel code -->
+                <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    </div>
+                    <div class="carousel-inner" style="height: 100vh" role="listbox">
+                        <!-- first slide -->
+                        <div class="carousel-item  active">
+                            <img src="../image/slider/splash_shop_3_slide_1-1.jpg" alt="Los Angeles"
+                                class="w-100 zoomOut">
+                            <div class="carousel-caption d-md-block text-dark text-start p-0">
+                                <h1 class="mb-md-5 animate__animated animate__bounceIn" style="font-size: 8vw;">
+                                    THE <strong>FASHION </strong>
+                                </h1>
+                                <p class="text-justify w-50 animate__animated animate__bounceInRight">
+                                    Fashion is something we deal with everyday. Even people who say
+                                    they do not care what they wear choose clothes every morning
+                                    that say a lot about them and how they feel that day.
+                                </p>
+                                <br>
+                                <a
+                                    class="button btn btn-md text-white text-uppercase animate__animated animate__bounceInLeft">Shop
+                                    Here</a>
+                            </div>
+                        </div>
+                        <!-- second slide -->
+                        <div class="carousel-item">
+                            <img src="../image/slider/splash_shop_3_slide_2.jpg" alt="Los Angeles" class="w-100 zoomIn">
+                            <div class="carousel-caption d-md-block text-end p-0">
+                                <h1 class="animate__animated animate__bounceIn" style="font-size: 8vw;">
+                                    AWESOME <br><strong>DESIGNS </strong>
+                                </h1>
+                                <p class="text-justify ms-auto w-50 animate__animated animate__bounceInLeft">
+                                    Fashion is something we deal with everyday. Even people who say
+                                    they do not care what they wear choose clothes every morning that
+                                    say a lot about them and how they feel that day.
+                                </p><br>
+                                <a
+                                    class=" button btn btn-lg border-0 text-white text-uppercase animate__animated animate__zoomInRight">Shop
+                                    Now</a>
+                            </div>
+                        </div>
+                        <!-- third slide -->
+                        <div class="carousel-item">
+                            <img src="../image/slider/splash_shop_3_slide_1-1.jpg" alt="Los Angeles"
+                                class="w-100 zoomIn">
+                            <div class="carousel-caption d-md-block text-center text-dark">
+                                <h1 data-animation="animated zoomInLeft" style="font-size: 8vw;">
+                                    <strong>SELL</strong> ANYTHING
+                                </h1>
+                                <p class="text-center m-auto w-75" data-animation="animated flipInX">
+                                    Shopping from home is addictively satisfying and almost dangerously easy. Just a few
+                                    clicks, some taps on the keyboard, and you have yourself a brand new wardrobe. You
+                                    basically never need to step foot inside a real store again. Women’s clothing stores
+                                    come to you instead.
+                                </p><br>
+                                <a href="" class=" button btn btn-lg border-0 text-white text-uppercase"
+                                    data-animation="animated lightSpeedIn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- controls -->
+                    <button class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- image carousel end -->
+
+    <!-- content -->
+    <div class="container-fluid">
+        <!--    banner-->
+        <div class="row">
+            <div class="col-sm-12 text-center p-5" style="background-image:url('../image/background/1-12.webp');">
+                <p class="text-uppercase p-2 m-auto text-white font-weight-lighter" style="font-size: 40px;">
+                    <strong class="fw-bold">Free Shipping </strong>For Order Over Rs 25000
+                </p>
+            </div>
+        </div>
+        <!--    banner end -->
+        <!--    collection-->
+        <div class="row" id="collection">
+            <div class="col-sm-6 p-0">
+                <div class="card border">
+                    <div class="card-body"
+                        style="background-image: url('../image/background/Men.png'); height:350px; background-position: right;background-repeat: no-repeat;background-size: contain">
+                        <h5 class="card-title text-uppercase pt-5 ps-5 font-weight-lighter" style="font-size: 40px;">
+                            <strong>Men</strong> Collection
+                        </h5>
+                        <p class="card-text text-uppercase pt-0 ps-5">select your favorite fashion </p>
+                        <a href="productFilter.php?collId=1"
+                            class=" button btn border-0 ms-5 text-white text-uppercase">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 p-0">
+                <div class="card border">
+                    <div class="card-body"
+                        style="background-image: url('../image/background/Women.png'); height: 350px;background-position: right;background-repeat: no-repeat;background-size: contain">
+                        <h5 class="card-title text-uppercase pt-5 ps-5 font-weight-lighter" style="font-size: 40px;">
+                            <strong>Women</strong> Collection
+                        </h5>
+                        <p class="card-text text-uppercase pt-0 ps-5">select your favorite fashion </p>
+                        <a href="productFilter.php?collId=2"
+                            class=" button btn border-0 ms-5 text-white text-uppercase">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 p-0">
+                <div class="card border">
+                    <div class="card-body"
+                        style="background-image: url('../image/background/kids.png'); height: 350px;background-position: right;background-repeat: no-repeat;background-size: contain">
+                        <h5 class="card-title text-uppercase pt-5 ps-5 font-weight-lighter" style="font-size: 40px;">
+                            <strong>Kids</strong> Collection
+                        </h5>
+                        <p class="card-text text-uppercase pt-0 ps-5">select your favorite fashion </p>
+                        <a href="#" class="button btn border-0 ms-5 text-white text-uppercase">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 p-0">
+                <div class="card border">
+                    <div class="card-body"
+                        style="background-image: url('../image/background/accessoires.png'); height: 350px;background-position: right;background-repeat: no-repeat;background-size: contain">
+                        <h5 class="card-title text-uppercase pt-5 ps-5 font-weight-lighter" style="font-size: 40px;">
+                            <strong>ACCESSOIRES</strong> Collection
+                        </h5>
+                        <p class="card-text text-uppercase pt-0 ps-5">select your favorite fashion </p>
+                        <a href="#" class="button btn border-0 ms-5 text-white text-uppercase">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    collection end-->
+    </div>
+
+    <!-- new arrivals -->
+    <div class="container-fluid" id="newIn">
+        <div class="row mt-3">
+            <div class="col-12">
+                <h1 class="text-uppercase  fw-bold text-dark text-center"
+                    style="font-size: 50px; font-family: montserrat,serif"> What's new</h1>
+                <h4 class="text-uppercase font-weight-lighter text-dark text-center"
+                    style="font-family: montserrat,serif"> new pieces every week</h4>
+                <br>
+            </div>
+        </div>
+
+        <!-- /////////// New Male Products /////////// -->
+        <div class="row">
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/levis_white_tshirt.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                Levis White T-Shirt
+                            </p>
+                            <p class="productName">
+                                Size : M
+                            </p>
+                            <p class="productName">
+                                Stock Price : 4500 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/levis_white_tshirt.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                Levis White T-Shirt
+                            </p>
+                            <p class="productName">
+                                Size : M
+                            </p>
+                            <p class="productName">
+                                Stock Price : 4500 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/levis_white_tshirt.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                Levis White T-Shirt
+                            </p>
+                            <p class="productName">
+                                Size : M
+                            </p>
+                            <p class="productName">
+                                Stock Price : 4500 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/levis_white_tshirt.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                Levis White T-Shirt
+                            </p>
+                            <p class="productName">
+                                Size : M
+                            </p>
+                            <p class="productName">
+                                Stock Price : 4500 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- /////////// New Female Products /////////// -->
+        <div class="row">
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/vs_yellow_frock.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                VS Yellow Frock
+                            </p>
+                            <p class="productName">
+                                Size : L
+                            </p>
+                            <p class="productName">
+                                Stock Price : 8700 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/vs_yellow_frock.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                VS Yellow Frock
+                            </p>
+                            <p class="productName">
+                                Size : L
+                            </p>
+                            <p class="productName">
+                                Stock Price : 8700 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/vs_yellow_frock.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                VS Yellow Frock
+                            </p>
+                            <p class="productName">
+                                Size : L
+                            </p>
+                            <p class="productName">
+                                Stock Price : 8700 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-3 p-3">
+                <a href="" type="button" class="text-decoration-none text-muted w-100">
+                    <div class="card shadow text-center">
+                        <img style="height: 300px;" class="card-img-top zoom img-fluid"
+                            src="../image/pro_img/vs_yellow_frock.jpg">
+                        <br>
+                        <div class="card-body p-1">
+                            <p class="productName">
+                                VS Yellow Frock
+                            </p>
+                            <p class="productName">
+                                Size : L
+                            </p>
+                            <p class="productName">
+                                Stock Price : 8700 LKR
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- new arrivals end -->
+    <!--content end -->
+
+    <!-- brands -->
+    <div class="container-fluid">
+        <div class="row p-3">
+            <div class="col-sm-12">
+                <h1 class="text-uppercase  fw-bold text-dark text-center"
+                    style="font-size: 50px; font-family: montserrat,serif"> Brands</h1>
+                <h4 class="text-uppercase font-weight-lighter text-dark text-center"
+                    style="font-family: montserrat,serif">We offer finest brands in our store</h4>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mx-auto">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/3.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/5.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/6.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mt-2">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/7.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/8.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/9.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/10.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/11.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-body">
+                        <img class="brand img-fluid" src="../image/brand_img/12.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--brands end-->
+    <!-- footer -->
+    <footer class="container-fluid mt-4 pb-2" style="background-color: #262626; min-height:150px; height:auto;">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="text-white font-weight-lighter">BE THE FIRST TO KNOW</span>
+                    </div>
+                    <div class="col-8 col-lg-12">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-8 mt-2">
+                        <button type="submit" class="btn fbutton">SUBSCRIBES US</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">FOLLOW US ON</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.facebook.com" class="pe-4 button1"><i class="fab fa-facebook-square "
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.twitter.com" class="pe-4 button1"><i class="fab fa-twitter-square"
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.instagram.com" class="pe-4 button1"><i class="fab fa-instagram-square"
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.pinterest.com" class="pe-4 button1"><i class="fab fa-pinterest-square"
+                                style="font-size: 48px"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">CUSTOMER CARE</h2>
+                    </div>
+                    <div class="col-12">
+                        <ul class="font-weight-lighter list-group list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white">Return & Refund</a></li>
+                            <li><a href="contactus.php" class="text-decoration-none text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Service Payment</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Store Locator</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Size Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">DISCOVER</h2>
+                    </div>
+                    <div class="col-12">
+                        <ul class="font-weight-lighter list-group list-unstyled">
+                            <li><a href="aboutUs.php" class="text-decoration-none text-white">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Terms Of Use</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Service Payment</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+                            <li><a href="faqs.php" class="text-decoration-none text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div style="height: 1px; background-color:white;"></div>
+
+    <!-- ////////////////////////// Copyright row start //////////////////////////////// -->
+    <footer class="container-fluid" style="background-color: #262626; min-height:70px; height:auto;">
+
+        <div class="row pt-3 pb-2">
+
+            <div class="col-md-6">
+                <p class="text-white text-uppercase font-weight-lighter">
+                    Designed By M. N. A. Shamil <br>
+                    Copyrights &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="../image/payment_methord/master.png" alt="MASTER" width="65px" height="40px"
+                    style="border-radius: 5px">&nbsp;
+                <img src="../image/payment_methord/visa.png" alt="VISA" width="65px" height="40px"
+                    style="border-radius: 5px">&nbsp;
+                <img src="../image/payment_methord/genie.png" alt="GENIE" width="40px" height="40px">&nbsp;
+                <img src="../image/payment_methord/sampth.png" alt="SAMPATH" width="40px" height="40px"
+                    style="border-radius: 10px">
+                <img src="../image/payment_methord/commercial.jpg" alt="COMMERCIAL" width="40px" height="40px"
+                    style="border-radius: 10px">
+                <img src="../image/payment_methord/fri-me.png" alt="FRIME" width="40px" height="40px"
+                    style="border-radius: 10px">
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- ////////////////////////// Copyright row End //////////////////////////////// -->
+
+    <div style="height:8px; background-color: #db9200;"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{
+  "_from": "datatables.net-datetime",
+  "_id": "datatables.net-datetime@1.1.2",
+  "_inBundle": false,
+  "_integrity": "sha512-UpmtpQ7oVtMgG0lt0nnwNfYH0YRWOk/SKv4Z+5RI8JX/rJHUQXyt9Li+7U0znmIv+4Vkw8yuUV9n9WRAEOviJQ==",
+  "_location": "/datatables.net-datetime",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "datatables.net-datetime",
+    "name": "datatables.net-datetime",
+    "escapedName": "datatables.net-datetime",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/datatables.net-datetime/-/datatables.net-datetime-1.1.2.tgz",
+  "_shasum": "d64f07063fd3df4adacde31ee972a1310c829623",
+  "_spec": "datatables.net-datetime",
+  "_where": "C:\\xampp\\htdocs\\bsrtextile\\resources\\datatablesAlt",
+  "author": {
+    "name": "SpryMedia Ltd"
+  },
+  "bugs": {
+    "url": "https://github.com/DataTables/DateTime/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "DateTime picker for DataTables.net",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4"
+  },
+  "homepage": "https://github.com/DataTables/DateTime#readme",
+  "keywords": [
+    "DateTables",
+    "Date",
+    "Time",
+    "Picker"
+  ],
+  "license": "MIT",
+  "main": "dist/dataTables.dateTime.js",
+  "name": "datatables.net-datetime",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataTables/DateTime.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "dist/dataTables.dateTime.css",
+  "types": "js/dataTables.dateTime.d.ts",
+  "version": "1.1.2"
+}
