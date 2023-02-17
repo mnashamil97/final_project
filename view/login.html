@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/icon" href="../image/logo/logo1.png">
+
+    <title>BOSARA TEXTILE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../resources/datatablesAlt/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="../resources/datatablesAlt/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../resources/datatablesAlt/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+    <div style="background-color: #db9200; height:8px;"></div>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light p-2">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-1 order-md-0" id="navbarNav">
+            <ul class="navbar-nav fw-bold">
+                <li class="nav-item me-2">
+                    <a href="home.html" class="text-decoration-underline" style="color:#808080">Home</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="#" class="text-decoration-underline" style="color:#808080">My Profile</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="contactUs.html" class="text-decoration-underline" style="color:#808080">Contact Us</a>
+                </li>
+                <li class="nav-item font-weight-lighter">
+                    <div>
+                        <a href="tel:+94763669100" class="me-2" style="color:#808080"><i
+                                class="fas fa-phone-rotary"></i> +94 763669100</a>
+                        <a href="https://www.facebook.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-twitter"></i></i></a>
+                        <a href="https://www.youtube.com" class="me-2" target="_blank" style="color:#808080"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <span class="ps-2 me-2" style="color:#808080;">
+                <span style="font-size: larger"><i class="fas fa-user-circle"></i></span>
+
+                <span>Hi...! User</span> &nbsp;
+                <a id="loginBtn" href="login.html"
+                    class="button btn border-0 text-white text-uppercase text-decoration-none" style="color:#808080;">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </span>
+        </div>
+
+    </nav>
+
+    <!-- /////////////////////////////////// 2nd Navbar ///////////////////////////////////// -->
+    <nav class="navbar sec-nav sticky-top navbar-expand-sm justify-content-center">
+
+        <div class="d-none d-sm-block me-auto">
+            <div class="navbar-brand">
+                <img src="../image/logo/logo1.png" width="200px" height="100px" class="align-top" alt="logo">
+            </div>
+        </div>
+
+        <ul class="navbar-nav text-uppercase fw-bolder">
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="home.html#newIn">new in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="home.html#collection">collections</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="aboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navmenu" href="cart.html" style="font-size: large">
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span class="badge badge-notify text-white">
+                        0
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- content -->
+    <div class="container-fluid">
+
+        <!-- /////////////////// Top Banner ///////////////////// -->
+        <div class="row">
+            <div class="col-md-12 text-center p-5" style="background-image:url('../image/background/1-12.webp');">
+                <p class="text-uppercase p-2 m-auto text-white font-weight-lighter"
+                    style=" font-family: montserrat,serif; font-size: 40px;">My Profile</p>
+                <p class="text-uppercase pt-3 pb-0 m-auto text-white font-weight-lighter ">
+                    <a class="text-decoration-none" style=" font-family: montserrat,serif; color:#db9200"
+                        href="home.php">Home</a> &rarr; My Profile
+                </p>
+            </div>
+        </div>
+        <!-- ///////////////////// Banner End /////////////////////// -->
+
+        <div class="row mt-3">
+            <!-- login -->
+            <div class="col-sm-6 text-muted p-4 p-sm-5">
+
+                <p class="font-weight-lighter text-uppercase"
+                    style="font-family: montserrat,serif; font-size: xx-large"><i class="fas fa-key"></i> LOGIN</p>
+
+                <form id="newCustomer" action="" method="POST">
+                    <label class="control-label">Username <span class="text-danger"> *</span></label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                        autocomplete="off" required>
+                    <br>
+                    <label class="control-label">Password <span class="text-danger"> *</span></label>
+                    <div class="input-group">
+                        <input type="password" id="pw" class="form-control" name="pw" placeholder="Password" required>
+
+                        <span class="input-group-text" id="pw_append" style="cursor: pointer;">
+                            <i id="pw_icon" class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="mt-2">
+                        <input name="keepLogin" type="checkbox" class="form-control-checkbox"> Keep Me Logged in
+                    </div>
+                    <button class="btn button text-white text-uppercase mt-2">Login</button>
+                    <a href="#" class="btn btn-link text-uppercase mt-3 float-right">Forgot Your
+                        Password ?</a>
+                </form>
+
+            </div>
+            <!-- login end -->
+
+            <!-- register -->
+            <div class="col-sm-6 text-muted p-4 p-sm-5" style="border-left: outset;">
+                <p class="font-weight-lighter text-uppercase"
+                    style=" font-family: montserrat,serif; font-size: xx-large"><i class="fas fa-clipboard-user"></i>
+                    REGISTER</p>
+
+                <form action="" method="POST">
+                    <label class="control-label">Username <span class="text-danger"> *</span></label>
+                    <input type="email" class="form-control" name="email" id="reg_email" placeholder="Email" required
+                        autocomplete="off">
+                    <h5 class="text-danger" id="email_response"></h5>
+                    <br>
+                    <p>A Temporary password will be sent to your email address.</p>
+                    <p class="text-justify">Your personal data will be used to support your experience throughout this
+                        website, to manage access to your account, and for other purposes described in our privacy
+                        policy.</p>
+                    <button type="submit" class="btn button text-white text-uppercase"
+                        id="registerBtn">REGISTER</button>
+                </form>
+
+            </div>
+            <!-- register end -->
+        </div>
+    </div>
+    <!-- content end -->
+
+    <script>
+        document.title = "BOSARA TEXTILE | Login";
+    </script>
+
+    <!-- footer -->
+    <footer class="container-fluid mt-4 pb-2" style="background-color: #262626; min-height:150px; height:auto;">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="text-white font-weight-lighter">BE THE FIRST TO KNOW</span>
+                    </div>
+                    <div class="col-8 col-lg-12">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-8 mt-2">
+                        <button type="submit" class="btn fbutton">SUBSCRIBES US</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">FOLLOW US ON</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.facebook.com" class="pe-4 button1"><i class="fab fa-facebook-square "
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.twitter.com" class="pe-4 button1"><i class="fab fa-twitter-square"
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.instagram.com" class="pe-4 button1"><i class="fab fa-instagram-square"
+                                style="font-size: 48px"></i></a>
+                        <a href="https://www.pinterest.com" class="pe-4 button1"><i class="fab fa-pinterest-square"
+                                style="font-size: 48px"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">CUSTOMER CARE</h2>
+                    </div>
+                    <div class="col-12">
+                        <ul class="font-weight-lighter list-group list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white">Return & Refund</a></li>
+                            <li><a href="contactUs.html" class="text-decoration-none text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Service Payment</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Store Locator</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Size Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-white font-weight-lighter">DISCOVER</h2>
+                    </div>
+                    <div class="col-12">
+                        <ul class="font-weight-lighter list-group list-unstyled">
+                            <li><a href="aboutUs.html" class="text-decoration-none text-white">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Terms Of Use</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Service Payment</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div style="height: 1px; background-color:white;"></div>
+
+    <!-- ////////////////////////// Copyright row start //////////////////////////////// -->
+    <footer class="container-fluid" style="background-color: #262626; min-height:70px; height:auto;">
+
+        <div class="row pt-3 pb-2">
+
+            <div class="col-md-6">
+                <p class="text-white text-uppercase font-weight-lighter">
+                    Designed By JC Dilshan <br>
+                    Copyrights &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="../image/payment_methord/master.png" alt="MASTER" width="65px" height="40px"
+                    style="border-radius: 5px">&nbsp;
+                <img src="../image/payment_methord/visa.png" alt="VISA" width="65px" height="40px"
+                    style="border-radius: 5px">&nbsp;
+                <img src="../image/payment_methord/genie.png" alt="GENIE" width="40px" height="40px">&nbsp;
+                <img src="../image/payment_methord/sampth.png" alt="SAMPATH" width="40px" height="40px"
+                    style="border-radius: 10px">
+                <img src="../image/payment_methord/commercial.jpg" alt="COMMERCIAL" width="40px" height="40px"
+                    style="border-radius: 10px">
+                <img src="../image/payment_methord/fri-me.png" alt="FRIME" width="40px" height="40px"
+                    style="border-radius: 10px">
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- ////////////////////////// Copyright row End //////////////////////////////// -->
+
+    <div style="height:8px; background-color: #db9200;"></div>
+
+</body>
+
+</html>
